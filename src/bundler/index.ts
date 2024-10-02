@@ -22,7 +22,6 @@ const bundle = async (rawCode: string) => {
 		},
 	});
 
-	console.log(result.outputFiles[0].text);
 	return result.outputFiles[0].text;
 };
 

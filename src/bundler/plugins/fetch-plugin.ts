@@ -34,11 +34,11 @@ export const fetchPlugin = (inputCode: string) => {
 					.replace(/"/g, '\\"')
 					.replace(/'/g, "\\'");
 
-				const contents =`
+				const contents = `
 						const style = document.createElement('style');
 						style.innerText = '${escaped}';
 						document.body.appendChild(style);
-					`
+					`;
 
 				const result: esbuild.OnLoadResult = {
 					loader: "jsx",
@@ -51,7 +51,6 @@ export const fetchPlugin = (inputCode: string) => {
 				return result;
 			});
 
-			
 			build.onLoad({ filter: /.*/ }, async (args: any) => {
 				const { data, request } = await axios.get(args.path);
 
@@ -62,7 +61,6 @@ export const fetchPlugin = (inputCode: string) => {
 				};
 
 				await fileCache.setItem(args.path, result);
-
 				return result;
 			});
 		},

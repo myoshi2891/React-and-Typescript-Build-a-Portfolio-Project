@@ -12,14 +12,14 @@ interface CellsState {
 	};
 }
 
-const initailState: CellsState = {
+const initialState: CellsState = {
 	loading: false,
 	error: null,
 	order: [],
 	data: {},
 };
 
-const reducer = produce((state: CellsState = initailState, action: Action) => {
+const reducer = produce((state: CellsState = initialState, action: Action) => {
 	switch (action.type) {
 		case ActionType.UPDATE_CELL:
 			const { id, content } = action.payload;
@@ -64,7 +64,7 @@ const reducer = produce((state: CellsState = initailState, action: Action) => {
 		default:
 			return state;
 	}
-});
+}, initialState);
 
 const randomId = () => {
 	return Math.random().toString(36).substring(2, 5);

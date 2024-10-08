@@ -14,6 +14,7 @@ const CellList: React.FC = () => {
 			<CellListItem key={cell.id} cell={cell} />
 		</Fragment>
 	));
+
 	return (
 		<div>
 			{renderedCells}

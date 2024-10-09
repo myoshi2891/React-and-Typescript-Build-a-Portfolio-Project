@@ -1,17 +1,15 @@
 import { Dispatch } from "redux";
+import bundle from "../../bundler";
 import { ActionType } from "../action-types";
 import {
 	Action,
-	UpdateCellAction,
 	DeleteCellAction,
-	MoveCellAction,
-	InsertCellAfterAction,
-	BundleStartAction,
-	BundleCompleteAction,
 	Direction,
+	InsertCellAfterAction,
+	MoveCellAction,
+	UpdateCellAction,
 } from "../actions";
 import { CellTypes } from "../cell";
-import bundle from "../../bundler";
 
 export const updateCell = (id: string, content: string): UpdateCellAction => {
 	return {

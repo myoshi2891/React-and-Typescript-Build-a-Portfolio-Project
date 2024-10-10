@@ -2,7 +2,7 @@ import { produce } from "immer";
 import { ActionType } from "../action-types";
 import { Action } from "../actions";
 
-interface BundleState {
+interface BundlesState {
 	[key: string]:
 		| {
 				loading: boolean;
@@ -12,10 +12,10 @@ interface BundleState {
 		| undefined;
 }
 
-const initialState: BundleState = {};
+const initialState: BundlesState = {};
 
 const reducer = produce(
-	(state: BundleState = initialState, action: Action): BundleState => {
+	(state: BundlesState = initialState, action: Action): BundlesState => {
 		switch (action.type) {
 			case ActionType.BUNDLE_START:
 				state[action.payload.cellId] = {

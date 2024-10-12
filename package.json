@@ -17,7 +17,7 @@
     "@types/react-redux": "7.1.27",
     "@types/react-resizable": "3.0.2",
     "@uiw/react-md-editor": "2.1.1",
-    "axios": "^1.5.1",
+    "axios": "^1.7.4",
     "bulmaswatch": "^0.8.1",
     "esbuild-wasm": "0.8.27",
     "jscodeshift": "0.11.0",

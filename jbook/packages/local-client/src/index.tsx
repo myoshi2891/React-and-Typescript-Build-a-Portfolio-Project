@@ -11,11 +11,11 @@ const root = ReactDOM.createRoot(el!);
 
 const App = () => {
   return (
-    <Provider store={store}>
-      <div>
-        <CellList />
-      </div>
-    </Provider>
+		<Provider store={store}>
+			<div>
+				<CellList />
+			</div>
+		</Provider>
   );
 };
 

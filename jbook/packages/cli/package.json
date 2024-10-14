@@ -11,17 +11,19 @@
 	],
 	"scripts": {
 		"start": "tsc --watch --preserveWatchOutput",
-		"prepublishOnly": "tsc"
+		"prepublishOnly": "esbuild src/index.ts --platform=node --outfile=dist/index.js --bundle --minify --define:process.env.NODE_ENV=\\'production\\'"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"commander": "^12.1.0",
-		"@jsnote-cli-jp2024/local-api": "^1.0.0"
+		"@jsnote-cli-jp2024/local-client": "^1.0.0"
 	},
 	"devDependencies": {
 		"@types/node": "^22.7.5",
-		"typescript": "^5.6.3"
+		"esbuild": "0.8.26",
+		"typescript": "^5.6.3",
+		"@jsnote-cli-jp2024/local-api": "^1.0.0",
+		"commander": "^12.1.0"
 	}
 }
